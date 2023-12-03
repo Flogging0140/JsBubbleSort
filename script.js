@@ -99,6 +99,6 @@ function CreateThings(numberToCreate, maxNumberValue) {
 // Create initial 100
 window.addEventListener('load', (event) => {
     console.clear()
-    CreateThings(250, 100);
+    CreateThings(50, 100);
     CreateChart();
 });

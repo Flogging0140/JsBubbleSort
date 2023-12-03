@@ -1,16 +1,16 @@
 function CreateChart() {
     const ctx = document.getElementById('myChart');
     let elementArray = document.querySelectorAll('#container .thing');
-    let numbersArrayUnsorted = Array.from(elementArray).map(e => e.innerHTML);
-    let numbersArrayUnsorted2 = Array.from(elementArray).map(e => parseInt(e.innerHTML));
+    let unsorted = Array.from(elementArray).map(e => e.innerHTML);
+    let unsortedNumbers = Array.from(elementArray).map(e => parseInt(e.innerHTML));
 
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: numbersArrayUnsorted,
+            labels: unsorted,
             datasets: [{
                 label: 'Data',
-                data: numbersArrayUnsorted2,
+                data: unsortedNumbers,
                 borderWidth: 1,
                 borderColor: 'rgb(87,226,229)',
                 backgroundColor: 'rgba(224,141,172, 0.5)'
